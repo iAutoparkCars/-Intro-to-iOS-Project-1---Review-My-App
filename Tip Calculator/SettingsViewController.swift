@@ -10,8 +10,24 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var defaultControl: UISegmentedControl!
+    @IBOutlet weak var defaultTheme: UISegmentedControl!
+    
+    @IBOutlet weak var themeLabel: UILabel!
+    @IBOutlet weak var tipLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let tipValue = defaults.integerForKey("defaultTipIndex")
+        defaultControl.selectedSegmentIndex = tipValue
+        let themeSetting = defaults.integerForKey("themeIndex")
+        defaultTheme.selectedSegmentIndex = themeSetting
+        if themeSetting == 1{
+            self.view.backgroundColor = UIColor.grayColor()
+            self.view.tintColor = UIColor.whiteColor()
+            tipLabel.textColor = UIColor.whiteColor()
+            themeLabel.textColor = UIColor.whiteColor()
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -22,6 +38,17 @@ class SettingsViewController: UIViewController {
     }
     
 
+    @IBAction func onEditingChange(sender: AnyObject) {
+        var defaultTip = defaultControl.selectedSegmentIndex
+        var themeSetting = defaultTheme.selectedSegmentIndex
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(defaultTip, forKey: "defaultTipIndex")
+        defaults.setInteger(themeSetting, forKey: "themeIndex")
+        print(themeSetting)
+        print(defaultTip)
+        defaults.synchronize()
+        
+    }
     /*
     // MARK: - Navigation
 
