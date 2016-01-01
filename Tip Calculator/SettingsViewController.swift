@@ -31,7 +31,19 @@ class SettingsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let themeSetting = defaults.integerForKey("themeIndex")
+        defaultTheme.selectedSegmentIndex = themeSetting
+        if themeSetting == 1{
+            self.view.backgroundColor = UIColor.cyanColor()
+            self.view.tintColor = UIColor.whiteColor()
+            tipLabel.textColor = UIColor.whiteColor()
+            themeLabel.textColor = UIColor.whiteColor()
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,6 +56,12 @@ class SettingsViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTip, forKey: "defaultTipIndex")
         defaults.setInteger(themeSetting, forKey: "themeIndex")
+        if themeSetting == 1{
+            self.view.backgroundColor = UIColor.cyanColor()
+        }
+        else {
+            self.view.backgroundColor = UIColor.whiteColor()
+        }
         print(themeSetting)
         print(defaultTip)
         defaults.synchronize()
