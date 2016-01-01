@@ -30,6 +30,10 @@ The following optional features will be implemented:
 Video Walkthrough
 -----------------
 ![enter image description here](tipapp.gif)
+> **Note:**
+> - This gif was created using [enter link description here](http://www.cockos.com/licecap/). The gif above is an walkthrough of my tip app. 
+
+
 
 
 
