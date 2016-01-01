@@ -7,7 +7,7 @@ Time Spent: 4 hours 30 minutes
 
 # User Stories
 The following required functionality is completed:
-
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="checked" disabled="disabled"> Created a Tip Calculator using Xcode that updates the tip and total amounts in real time, using a segmented control</li>
 > - Created a Tip Calculator using Xcode that updates the tip and total amounts in real time, using a segmented control
 > - Successfully pushed my code to github
 > - Added a README which includes a GIF walkthrough of the app's functionality
