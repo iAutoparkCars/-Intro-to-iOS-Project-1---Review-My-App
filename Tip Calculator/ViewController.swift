@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         tipControl.selectedSegmentIndex = tipValue
         let themeSetting = defaults.integerForKey("themeIndex")
         let currencySetting = defaults.integerForKey("currencyIndex")
-        currencyIndex = currencyValue[currencySetting]
+        
         print(currencySetting)
         // print(themeSetting)
         if themeSetting == 1 {
