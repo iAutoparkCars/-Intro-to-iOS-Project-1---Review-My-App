@@ -23,7 +23,7 @@ class SettingsViewController: UIViewController {
         let themeSetting = defaults.integerForKey("themeIndex")
         defaultTheme.selectedSegmentIndex = themeSetting
         if themeSetting == 1{
-            self.view.backgroundColor = UIColor.grayColor()
+            self.view.backgroundColor = UIColor.cyanColor()
             self.view.tintColor = UIColor.whiteColor()
             tipLabel.textColor = UIColor.whiteColor()
             themeLabel.textColor = UIColor.whiteColor()

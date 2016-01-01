@@ -129,6 +129,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="sad"/>
                                 <connections>
+                                    <action selector="onEditingchange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xv2-F6-V6R"/>
                                     <action selector="serviceTipOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evm-d4-9tj"/>
                                 </connections>
                             </button>
@@ -137,6 +138,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="avergae"/>
                                 <connections>
+                                    <action selector="onEditingchange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p3N-3f-1KP"/>
                                     <action selector="serviceTipTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Gu-AX-ecn"/>
                                 </connections>
                             </button>
@@ -154,6 +156,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="diner"/>
                                 <connections>
+                                    <action selector="onEditingchange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zDQ-oG-j8g"/>
                                     <action selector="venueTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2T-dh-sMu"/>
                                 </connections>
                             </button>
@@ -162,6 +165,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pizza"/>
                                 <connections>
+                                    <action selector="onEditingchange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QRc-1u-IFX"/>
                                     <action selector="venueThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="82w-PU-xdW"/>
                                 </connections>
                             </button>

@@ -47,7 +47,6 @@ class ViewController: UIViewController {
         print(themeSetting)
         if themeSetting == 1 {
             self.view.backgroundColor = UIColor.cyanColor()
-            self.view.tintColor = UIColor.whiteColor()
         }
         else {
             self.view.backgroundColor = UIColor.whiteColor()
@@ -109,16 +108,16 @@ class ViewController: UIViewController {
     
     @IBAction func venueOne(sender: AnyObject) {
         venueTip = 0.05;
-        print(venueTip)
+     // print(venueTip)
     }
 
     @IBAction func venueTwo(sender: AnyObject) {
         venueTip = 0.04;
-        print(venueTip)
+       // print(venueTip)
     }
     @IBAction func venueThree(sender: AnyObject) {
         venueTip = 0.03;
-        print(venueTip)
+       // print(venueTip)
     }
     
     @IBAction func onTap(sender: AnyObject) {
