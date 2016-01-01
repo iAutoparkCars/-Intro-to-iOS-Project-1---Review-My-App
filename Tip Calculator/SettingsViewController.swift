@@ -13,6 +13,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var defaultControl: UISegmentedControl!
     @IBOutlet weak var defaultTheme: UISegmentedControl!
     
+    
     @IBOutlet weak var currencyControl: UISegmentedControl!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var themeLabel: UILabel!

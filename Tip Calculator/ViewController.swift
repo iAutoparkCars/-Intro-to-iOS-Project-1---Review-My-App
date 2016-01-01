@@ -14,13 +14,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    @IBOutlet weak var currencyName: UILabel!
     @IBOutlet weak var personFour: UILabel!
     @IBOutlet weak var personThree: UILabel!
     @IBOutlet weak var personTwo: UILabel!
     @IBOutlet weak var personOne: UILabel!
     var venueTip = 0.02;
     var serviceTip = 0.01;
-    var currencyValue = [1.00, 1.33, 1.54, 0.20]
+    var currencyValue: [Double] = [1.00, 0.92, 6.51, 0.68, 1.00]
+    var currencyNameOf: [String] = ["dollar", "Pound", "Yuan", "Euro", "Franc"]
     var currencyIndex = 1.00;
     
     @IBOutlet weak var imageController: UICollectionView!
@@ -43,12 +45,14 @@ class ViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         let tipValue = defaults.integerForKey("defaultTipIndex")
         print("New defaults")
-        print(tipValue)
+        // print(tipValue)
         tipControl.selectedSegmentIndex = tipValue
         let themeSetting = defaults.integerForKey("themeIndex")
         let currencySetting = defaults.integerForKey("currencyIndex")
-        
         print(currencySetting)
+        currencyIndex = currencyValue[currencySetting]
+        print(currencyIndex)
+        currencyName.text = currencyNameOf[currencySetting]
         // print(themeSetting)
         if themeSetting == 1 {
             self.view.backgroundColor = UIColor.cyanColor()
@@ -88,7 +92,7 @@ class ViewController: UIViewController {
         var totalTip = serviceTip + venueTip + tipPercentage
         print(totalTip)
         let tip = billAmount * totalTip
-        let total = billAmount + tip
+        let total = (billAmount + tip) * currencyIndex
         
         tipLabel.text = "$ \(tip)"
         finalBill.text = "$ \(total)"

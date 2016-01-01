@@ -35,8 +35,8 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xfv-u6-Omj">
-                                <rect key="frame" x="20" y="349" width="100" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Bill:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xfv-u6-Omj">
+                                <rect key="frame" x="2" y="349" width="107" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -254,6 +254,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currency Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yfQ-g4-ySc">
+                                <rect key="frame" x="111" y="355" width="117" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431904315948" green="0.89411771297454834" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
                         <accessibility key="accessibilityConfiguration">
@@ -274,6 +281,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="xdp-Oy-P2C" id="Uyk-Vj-qkD"/>
+                        <outlet property="currencyName" destination="yfQ-g4-ySc" id="V6u-fL-rTh"/>
                         <outlet property="finalBill" destination="3NY-4G-TGm" id="KZX-F0-80l"/>
                         <outlet property="personFour" destination="vRL-i1-q57" id="84Q-rs-dnt"/>
                         <outlet property="personOne" destination="39I-fy-g9H" id="blc-iM-FK0"/>
