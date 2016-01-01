@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var personOne: UILabel!
     var venueTip = 0.02;
     var serviceTip = 0.01;
+    var currencyValue = [1.00, 1.33, 1.54, 0.20]
+    var currencyIndex = 1.00;
     
     @IBOutlet weak var imageController: UICollectionView!
     @IBOutlet weak var imageview: UICollectionViewCell!
@@ -44,7 +46,10 @@ class ViewController: UIViewController {
         print(tipValue)
         tipControl.selectedSegmentIndex = tipValue
         let themeSetting = defaults.integerForKey("themeIndex")
-        print(themeSetting)
+        let currencySetting = defaults.integerForKey("currencyIndex")
+        currencyIndex = currencyValue[currencySetting]
+        print(currencySetting)
+        // print(themeSetting)
         if themeSetting == 1 {
             self.view.backgroundColor = UIColor.cyanColor()
         }

@@ -13,6 +13,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var defaultControl: UISegmentedControl!
     @IBOutlet weak var defaultTheme: UISegmentedControl!
     
+    @IBOutlet weak var currencyControl: UISegmentedControl!
+    @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var themeLabel: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     override func viewDidLoad() {
@@ -21,6 +23,8 @@ class SettingsViewController: UIViewController {
         let tipValue = defaults.integerForKey("defaultTipIndex")
         defaultControl.selectedSegmentIndex = tipValue
         let themeSetting = defaults.integerForKey("themeIndex")
+        let currencySetting = defaults.integerForKey("currencyIndex")
+        currencyControl.selectedSegmentIndex = currencySetting
         defaultTheme.selectedSegmentIndex = themeSetting
         if themeSetting == 1{
             self.view.backgroundColor = UIColor.cyanColor()
@@ -53,17 +57,19 @@ class SettingsViewController: UIViewController {
     @IBAction func onEditingChange(sender: AnyObject) {
         var defaultTip = defaultControl.selectedSegmentIndex
         var themeSetting = defaultTheme.selectedSegmentIndex
+        var currencySetting = currencyControl.selectedSegmentIndex
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTip, forKey: "defaultTipIndex")
         defaults.setInteger(themeSetting, forKey: "themeIndex")
+        defaults.setInteger(currencySetting, forKey: "currencyIndex")
         if themeSetting == 1{
             self.view.backgroundColor = UIColor.cyanColor()
         }
         else {
             self.view.backgroundColor = UIColor.whiteColor()
         }
-        print(themeSetting)
-        print(defaultTip)
+        // print(themeSetting)
+        // print(defaultTip)
         defaults.synchronize()
         
     }

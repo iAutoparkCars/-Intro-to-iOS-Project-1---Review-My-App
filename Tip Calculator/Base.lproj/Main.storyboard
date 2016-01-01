@@ -337,11 +337,34 @@
                                     <action selector="onEditingChange:" destination="SZq-a4-nUM" eventType="valueChanged" id="mzm-d6-83F"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cnH-pN-UKL">
+                                <rect key="frame" x="20" y="301" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kEv-dX-UTn">
+                                <rect key="frame" x="27" y="345" width="267" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Dollar"/>
+                                    <segment title="Euro"/>
+                                    <segment title="Yuan"/>
+                                    <segment title="Pound"/>
+                                    <segment title="Franc"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onEditingChange:" destination="SZq-a4-nUM" eventType="valueChanged" id="iZo-Q2-Oi2"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="at4-R4-loi"/>
                     <connections>
+                        <outlet property="currencyControl" destination="kEv-dX-UTn" id="6Ai-Tt-lcn"/>
+                        <outlet property="currencyLabel" destination="cnH-pN-UKL" id="i4R-ty-ZvS"/>
                         <outlet property="defaultControl" destination="TKx-Nc-L7U" id="CnA-E1-KiE"/>
                         <outlet property="defaultTheme" destination="Fac-g8-Z7M" id="cTO-32-O2k"/>
                         <outlet property="themeLabel" destination="IEZ-xU-Krk" id="ST3-Tv-iNg"/>
